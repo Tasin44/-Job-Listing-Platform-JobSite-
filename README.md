@@ -15,20 +15,6 @@ This is a backend project built with **Django** and **Django REST Framework**. I
 
 ---
 
-## 🏗️ Project Structure
-
-```
-intern_backend_project/
-│
-├── manage.py
-├── db.sqlite3
-├── requirements.txt
-├── .env
-├── .gitignore
-├── [your Django apps and modules here]
-└── ...
-```
-
 ---
 
 ## ⚙️ Installation
@@ -101,13 +87,9 @@ drf-yasg==1.21.10
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. Feel free to customize as per your organization's requirements.
-
 ---
 
 ## Author
 
 **Tasin Mahmud**  
-*Feel free to reach out or fork this project for your learning or extensions!*
+
