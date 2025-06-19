@@ -117,6 +117,8 @@ jobsite/
 ├── media/ # Storage for uploaded files (resumes, photos)
 └── manage.py # Django management script
 
+
+
 ## Setup Instructions
 
 ### 1. Clone the Repository:
