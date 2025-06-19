@@ -99,23 +99,23 @@ jobsite/
 │   │   │   └── serializers.py
 │   │   ├── views/              
 │   │   │   └── views.py
-│   │   └── urls.py             # Job-related URLs
-│   ├── admin.py                # Admin interface for Job, JobApplication
-│   ├── choices.py              # Enum choices (JobStatus, ApplicationStatus)
-│   ├── models.py               # Job, JobApplication models
-│   ├── signals.py              # Signals for application notifications
-│   └── apps.py                 # App configuration
-├── shared/                     # Shared utilities
-│   ├── base_admin.py           # Base admin class
-│   ├── base_model.py           # Base model with UUID, timestamps
-│   ├── choices.py              # Shared status choices
-│   └── permissions.py          # Custom permissions
-├── config/                     # Project settings
-│   ├── settings.py             # Django settings
-│   ├── urls.py                 # Root URL configuration
-│   └── wsgi.py                 # WSGI entry point
-├── media/                      # Storage for uploaded files (resumes, photos)
-└── manage.py                   # Django management script
+│   │   └── urls.py             
+│   ├── admin.py               
+│   ├── choices.py             
+│   ├── models.py               
+│   ├── signals.py              
+│   └── apps.py                 
+├── shared/                     
+│   ├── base_admin.py           
+│   ├── base_model.py           
+│   ├── choices.py              
+│   └── permissions.py          
+├── config/                     
+│   ├── settings.py             
+│   ├── urls.py                 
+│   └── wsgi.py                
+├── media/                    
+└── manage.py                   
 
 
 ## Setup Instructions
@@ -509,7 +509,7 @@ def send_welcome_email_task(user_id):
 🌐 Root URL Redirect
 
 Avoid 404 on root:
-
+``
 from django.shortcuts import redirect
 
 def redirect_to_swagger(request):
@@ -519,7 +519,7 @@ urlpatterns = [
     path('', redirect_to_swagger, name='home'),
     # ... other patterns ...
 ]
-
+``
 🚀 Future Improvements
 
     Consolidate duplicate registration logic
