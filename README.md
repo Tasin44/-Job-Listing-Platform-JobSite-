@@ -71,52 +71,51 @@ JobSite is designed to facilitate job recruitment by providing a platform where 
 
 ## Project Structure
 jobsite/
-├── authapp/ # Authentication app
-│ ├── rest/
-│ │ ├── serializers/ # Serializers for API endpoints
-│ │ │ ├── register.py # UserRegisterSerializer
-│ │ │ └── serializers.py # Other serializers (login, profile, etc.)
-│ │ ├── urlss/ # URL configurations
-│ │ │ ├── register.py # Registration endpoint
-│ │ │ ├── token.py # Token endpoints
-│ │ │ └── urls.py # Main auth URLs
-│ │ └── views/ # API views
-│ │ ├── register.py # UserRegisterView
-│ │ └── views.py # Other views (login, profile, etc.)
-│ ├── signals.py # Signals for email notifications
-│ ├── utils.py # EmailService and utility functions
-│ └── apps.py # App configuration
-├── core/ # Core app (models, managers, choices)
-│ ├── admin.py # Admin interface for User, UserProfile
-│ ├── choices.py # Enum choices (Gender, Role, Status)
-│ ├── managers.py # Custom UserManager
-│ ├── models.py # User, UserProfile models
-│ ├── signals.py # Signal to create UserProfile
-│ └── apps.py # App configuration
-├── job/ # Job management app
-│ ├── rest/
-│ │ ├── serializers/ # Serializers for jobs and applications
-│ │ │ └── serializers.py
-│ │ ├── views/ # API views for jobs and applications
-│ │ │ └── views.py
-│ │ └── urls.py # Job-related URLs
-│ ├── admin.py # Admin interface for Job, JobApplication
-│ ├── choices.py # Enum choices (JobStatus, ApplicationStatus)
-│ ├── models.py # Job, JobApplication models
-│ ├── signals.py # Signals for application notifications
-│ └── apps.py # App configuration
-├── shared/ # Shared utilities
-│ ├── base_admin.py # Base admin class
-│ ├── base_model.py # Base model with UUID, timestamps
-│ ├── choices.py # Shared status choices
-│ └── permissions.py # Custom permissions
-├── config/ # Project settings
-│ ├── settings.py # Django settings
-│ ├── urls.py # Root URL configuration
-│ └── wsgi.py # WSGI entry point
-├── media/ # Storage for uploaded files (resumes, photos)
-└── manage.py # Django management script
-
+├── authapp/                    # Authentication app
+│   ├── rest/
+│   │   ├── serializers/        # Serializers for API endpoints
+│   │   │   ├── register.py     # UserRegisterSerializer
+│   │   │   └── serializers.py  # Other serializers (login, profile, etc.)
+│   │   ├── urlss/              # URL configurations
+│   │   │   ├── register.py     # Registration endpoint
+│   │   │   ├── token.py        # Token endpoints
+│   │   │   └── urls.py         # Main auth URLs
+│   │   └── views/              # API views
+│   │       ├── register.py     # UserRegisterView
+│   │       └── views.py        # Other views (login, profile, etc.)
+│   ├── signals.py              # Signals for email notifications
+│   ├── utils.py                # EmailService and utility functions
+│   └── apps.py                 # App configuration
+├── core/                       # Core app (models, managers, choices)
+│   ├── admin.py                # Admin interface for User, UserProfile
+│   ├── choices.py              # Enum choices (Gender, Role, Status)
+│   ├── managers.py             # Custom UserManager
+│   ├── models.py               # User, UserProfile models
+│   ├── signals.py              # Signal to create UserProfile
+│   └── apps.py                 # App configuration
+├── job/                        # Job management app
+│   ├── rest/
+│   │   ├── serializers/        # Serializers for jobs and applications
+│   │   │   └── serializers.py
+│   │   ├── views/              # API views for jobs and applications
+│   │   │   └── views.py
+│   │   └── urls.py             # Job-related URLs
+│   ├── admin.py                # Admin interface for Job, JobApplication
+│   ├── choices.py              # Enum choices (JobStatus, ApplicationStatus)
+│   ├── models.py               # Job, JobApplication models
+│   ├── signals.py              # Signals for application notifications
+│   └── apps.py                 # App configuration
+├── shared/                     # Shared utilities
+│   ├── base_admin.py           # Base admin class
+│   ├── base_model.py           # Base model with UUID, timestamps
+│   ├── choices.py              # Shared status choices
+│   └── permissions.py          # Custom permissions
+├── config/                     # Project settings
+│   ├── settings.py             # Django settings
+│   ├── urls.py                 # Root URL configuration
+│   └── wsgi.py                 # WSGI entry point
+├── media/                      # Storage for uploaded files (resumes, photos)
+└── manage.py                   # Django management script
 
 
 ## Setup Instructions
