@@ -447,7 +447,7 @@ Access Key URLs:
 
 The platform uses Django’s SMTP email backend to send notifications.
 Current Gmail SMTP Config:
-
+```
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -455,11 +455,11 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'mdtm20062@gmail.com'
 EMAIL_HOST_PASSWORD = 'lifbzbeazgtaxpkt'
 DEFAULT_FROM_EMAIL = 'mdtm20062@gmail.com'
-
+```
 For Development:
-
+```
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
+```
 🧪 Development Notes
 🔁 Duplicate Registration Logic
 
@@ -480,7 +480,7 @@ path("api/v1/auth/", include("authapp.rest.urlss.urls")),
 📂 File Upload Validation
 
 Add validators:
-``
+```
 from django.core.validators import FileExtensionValidator
 
 photo = models.ImageField(
@@ -496,20 +496,20 @@ resume = models.FileField(
     validators=[FileExtensionValidator(allowed_extensions=['pdf', 'doc', 'docx'])],
     help_text="Resume/CV (PDF, DOC, DOCX)"
 )
-``
+```
 📨 Asynchronous Email Sending (with Celery)
-
+```
 from celery import shared_task
 
 @shared_task
 def send_welcome_email_task(user_id):
     user = User.objects.get(id=user_id)
     EmailService.send_welcome_email(user)
-
+```
 🌐 Root URL Redirect
 
 Avoid 404 on root:
-``
+```
 from django.shortcuts import redirect
 
 def redirect_to_swagger(request):
@@ -519,7 +519,7 @@ urlpatterns = [
     path('', redirect_to_swagger, name='home'),
     # ... other patterns ...
 ]
-``
+```
 🚀 Future Improvements
 
     Consolidate duplicate registration logic
