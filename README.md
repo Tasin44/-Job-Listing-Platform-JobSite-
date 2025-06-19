@@ -71,33 +71,33 @@ JobSite is designed to facilitate job recruitment by providing a platform where 
 
 ## Project Structure
 jobsite/
-├── authapp/                    # Authentication app
+├── authapp/                    
 │   ├── rest/
-│   │   ├── serializers/        # Serializers for API endpoints
-│   │   │   ├── register.py     # UserRegisterSerializer
-│   │   │   └── serializers.py  # Other serializers (login, profile, etc.)
-│   │   ├── urlss/              # URL configurations
-│   │   │   ├── register.py     # Registration endpoint
-│   │   │   ├── token.py        # Token endpoints
-│   │   │   └── urls.py         # Main auth URLs
-│   │   └── views/              # API views
-│   │       ├── register.py     # UserRegisterView
-│   │       └── views.py        # Other views (login, profile, etc.)
-│   ├── signals.py              # Signals for email notifications
-│   ├── utils.py                # EmailService and utility functions
-│   └── apps.py                 # App configuration
-├── core/                       # Core app (models, managers, choices)
-│   ├── admin.py                # Admin interface for User, UserProfile
-│   ├── choices.py              # Enum choices (Gender, Role, Status)
-│   ├── managers.py             # Custom UserManager
-│   ├── models.py               # User, UserProfile models
-│   ├── signals.py              # Signal to create UserProfile
-│   └── apps.py                 # App configuration
-├── job/                        # Job management app
+│   │   ├── serializers/        
+│   │   │   ├── register.py     
+│   │   │   └── serializers.py  
+│   │   ├── urlss/              
+│   │   │   ├── register.py     
+│   │   │   ├── token.py        
+│   │   │   └── urls.py         
+│   │   └── views/             
+│   │       ├── register.py     
+│   │       └── views.py        
+│   ├── signals.py             
+│   ├── utils.py               
+│   └── apps.py                
+├── core/                      
+│   ├── admin.py                
+│   ├── choices.py             
+│   ├── managers.py             
+│   ├── models.py               
+│   ├── signals.py              
+│   └── apps.py                 
+├── job/                       
 │   ├── rest/
-│   │   ├── serializers/        # Serializers for jobs and applications
+│   │   ├── serializers/        
 │   │   │   └── serializers.py
-│   │   ├── views/              # API views for jobs and applications
+│   │   ├── views/              
 │   │   │   └── views.py
 │   │   └── urls.py             # Job-related URLs
 │   ├── admin.py                # Admin interface for Job, JobApplication
