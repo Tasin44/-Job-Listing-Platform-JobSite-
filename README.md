@@ -480,7 +480,7 @@ path("api/v1/auth/", include("authapp.rest.urlss.urls")),
 📂 File Upload Validation
 
 Add validators:
-
+``
 from django.core.validators import FileExtensionValidator
 
 photo = models.ImageField(
@@ -496,7 +496,7 @@ resume = models.FileField(
     validators=[FileExtensionValidator(allowed_extensions=['pdf', 'doc', 'docx'])],
     help_text="Resume/CV (PDF, DOC, DOCX)"
 )
-
+``
 📨 Asynchronous Email Sending (with Celery)
 
 from celery import shared_task
