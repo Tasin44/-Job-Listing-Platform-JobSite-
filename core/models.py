@@ -7,7 +7,6 @@ from core.choices import GenderChoices,UserRoleChoices
 from core.managers import UserManager
 from shared.base_model import BaseModel
 
-
 class User(AbstractBaseUser, PermissionsMixin, BaseModel):
     username = models.CharField(max_length=50, unique=True, db_index=True)
     password = models.CharField(max_length=128, blank=True)
